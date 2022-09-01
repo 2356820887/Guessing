@@ -3,5 +3,6 @@ public class StartGuess {
         Game game = new Game();
         game.startGame();
         game.initial();
+        game.showResult();
     }
 }

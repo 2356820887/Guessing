@@ -2,6 +2,19 @@ public class Computer {
     private final int show = (int)(Math.random()*3)+1;
     private int name;
     private String name_;
+
+    public Computer() {
+    }
+
+    public Computer(int name, String name_) {
+        this.name = name;
+        this.name_ = name_;
+    }
+
+    public int getShow() {
+        return show;
+    }
+
     public int getName() {
         return name;
     }
