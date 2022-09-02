@@ -1,25 +1,33 @@
 public class Person {
-    private int show;
+    private int showFist;
     private String name;
+
+    public Person() {
+    }
+
     public int getShow() {
-        return show;
+        return showFist;
     }
+
     public void setShow(int show) {
-        this.show = show;
+        this.showFist = show;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
-    public void showFist(){
+
+    public void showFist() {
         System.out.print("你出拳: ");
-        if (show == 1) {
+        if (showFist == 1) {
             System.out.println("剪刀");
-        } else if (show == 2) {
+        } else if (showFist == 2) {
             System.out.println("石头");
-        } else if (show == 3) {
+        } else if (showFist == 3) {
             System.out.println("布");
         }
     }
