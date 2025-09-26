@@ -22,13 +22,19 @@ public class Person {
     }
 
     public void showFist() {
-        System.out.print("你出拳: ");
-        if (showFist == 1) {
-            System.out.println("剪刀");
-        } else if (showFist == 2) {
-            System.out.println("石头");
-        } else if (showFist == 3) {
-            System.out.println("布");
+        System.out.print("你出拳: " + getFistName(this.showFist));
+    }
+
+    public String getFistName(int showFist) {
+        switch (showFist) {
+            case 1:
+                return "剪刀";
+            case 2:
+                return "石头";
+            case 3:
+                return "布";
+            default:
+                return "未知出拳";
         }
     }
 }

@@ -1,21 +1,29 @@
 public class Computer {
-    private final int show = (int) (Math.random() * 3 + 1);
+    private int showFist;
 
     public Computer() {
     }
 
     public int getShow() {
-        return show;
+        // 每次调用时都生成一个新的随机拳法
+        this.showFist = (int) (Math.random() * 3 + 1);
+        return showFist;
     }
 
     public void showFist() {
-        System.out.print("出拳: ");
-        if (show == 1) {
-            System.out.println("剪刀");
-        } else if (show == 2) {
-            System.out.println("石头");
-        } else if (show == 3) {
-            System.out.println("布");
+        System.out.print("出拳: " + getFistName(this.showFist));
+    }
+
+    public String getFistName(int showFist) {
+        switch (showFist) {
+            case 1:
+                return "剪刀";
+            case 2:
+                return "石头";
+            case 3:
+                return "布";
+            default:
+                return "未知出拳";
         }
     }
 }
